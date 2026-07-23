@@ -22,6 +22,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
+        <li><a href="#vehicles">Vehicles</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -127,6 +128,62 @@
     </div>
   </section>
 
+  <!-- Vehicles Section -->
+  <section id="vehicles" class="vehicles-section">
+    <div class="section-header">
+      <h2>Our Vehicles</h2>
+      <div class="gold-divider"></div>
+      <p>Premium Mercedes and Toyota fleet tailored for executive comfort, airport transfers, and private group travel.</p>
+    </div>
+
+    <div class="vehicles-grid">
+      <!-- Vehicle Card 1: Mercedes V-Class -->
+      <div class="vehicle-card">
+        <div class="vehicle-badge">Most Popular</div>
+        
+        <!-- Mercedes Photo Collage (m1.jpg to m4.jpg) -->
+        <div class="collage-grid mercury-collage">
+          <div class="collage-item large" style="background-image: url('src/assets/m1.jpg');"></div>
+          <div class="collage-item medium" style="background-image: url('src/assets/m2.jpg');"></div>
+          <div class="collage-item small" style="background-image: url('src/assets/m3.jpg');"></div>
+          <div class="collage-item wide" style="background-image: url('src/assets/m4.jpg');"></div>
+        </div>
+
+        <div class="vehicle-details">
+          <h3>Mercedes-Benz V-Class</h3>
+          <p class="vehicle-category">Luxury Van / Minivan</p>
+
+          <button class="btn btn-gold btn-full open-modal-btn" data-vehicle="Mercedes-Benz V-Class">
+            Book
+          </button>
+        </div>
+      </div>
+
+      <!-- Vehicle Card 2: Toyota Proace -->
+      <div class="vehicle-card">
+        <!-- Toyota Photo Collage (t1.jpg to t7.jpg) -->
+        <div class="collage-grid toyota-collage">
+          <div class="collage-item large" style="background-image: url('src/assets/t1.jpg');"></div>
+          <div class="collage-item medium" style="background-image: url('src/assets/t2.jpg');"></div>
+          <div class="collage-item small" style="background-image: url('src/assets/t3.jpg');"></div>
+          <div class="collage-item medium" style="background-image: url('src/assets/t4.jpg');"></div>
+          <div class="collage-item wide" style="background-image: url('src/assets/t5.jpg');"></div>
+          <div class="collage-item small" style="background-image: url('src/assets/t6.jpg');"></div>
+          <div class="collage-item normal" style="background-image: url('src/assets/t7.jpg');"></div>
+        </div>
+
+        <div class="vehicle-details">
+          <h3>Toyota Proace</h3>
+          <p class="vehicle-category">Minivan</p>
+
+          <button class="btn btn-gold btn-full open-modal-btn" data-vehicle="Toyota Proace">
+            Book
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact & Booking Section -->
   <section id="contact" class="contact-section">
     <div class="contact-box">
@@ -160,6 +217,7 @@
       </div>
     </div>
   </section>
+
   <!-- Booking Modal -->
   <div class="modal-overlay" id="bookingModal">
     <div class="modal-content">
@@ -209,11 +267,16 @@
       </form>
     </div>
   </div>
+  <!-- Image Lightbox Popup -->
+  <div class="lightbox-overlay" id="imageLightbox">
+    <span class="close-lightbox" id="closeLightbox">&times;</span>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged Vehicle Image">
+  </div>
 
   <footer>
     <p>&copy; 2026 DKT Paris. All rights reserved. Registered Tour Agent & VTC Provider.</p>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="src/js/main.js"></script>
 </body>
 </html>

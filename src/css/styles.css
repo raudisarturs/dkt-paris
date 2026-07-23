@@ -234,6 +234,123 @@ h1, h2, h3 {
   font-size: 0.95rem;
 }
 
+/* Vehicles Section */
+.vehicles-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.vehicle-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold-primary);
+}
+
+.vehicle-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--gold-gradient);
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  z-index: 20;
+}
+
+.vehicle-details {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex-grow: 1;
+}
+
+.vehicle-details h3 {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.vehicle-category {
+  color: var(--gold-primary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+}
+
+/* Photo Collages */
+.collage-grid {
+  display: grid;
+  gap: 8px;
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.collage-item {
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  min-height: 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.collage-item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  z-index: 10;
+}
+
+/* Mercedes Collage Grid (4 images) */
+.mercury-collage {
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: repeat(2, 110px);
+}
+
+.mercury-collage .collage-item.large {
+  grid-row: 1 / 3;
+}
+
+.mercury-collage .collage-item.wide {
+  grid-column: 2 / 3;
+}
+
+/* Toyota Collage Grid (7 images) */
+.toyota-collage {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 85px);
+}
+
+.toyota-collage .collage-item.large {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.toyota-collage .collage-item.wide {
+  grid-column: 1 / 3;
+}
+
 /* About & Contact */
 .about-section, .contact-section {
   max-width: 1200px;
@@ -318,6 +435,17 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
 .input-group input, 
 .input-group select, 
 .input-group textarea {
@@ -348,7 +476,58 @@ footer {
   font-size: 0.85rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
+/* Image Lightbox Overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
 
+.lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  border: 1px solid var(--gold-primary);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+  object-fit: contain;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active .lightbox-img {
+  transform: scale(1);
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 3001;
+  transition: color 0.2s ease;
+}
+
+.close-lightbox:hover {
+  color: var(--gold-primary);
+}
 /* ==========================================
    MOBILE & TABLET RESPONSIVE STYLES
    ========================================== */
@@ -359,7 +538,6 @@ footer {
     padding: 0.8rem 1rem;
   }
 
-  /* Hide desktop links on mobile to save space */
   .nav-links {
     display: none; 
   }
@@ -381,7 +559,7 @@ footer {
   }
 
   .hero h1 {
-    font-size: 2.1rem; /* Scaled down from 3.2rem for mobile screens */
+    font-size: 2.1rem;
     line-height: 1.3;
     margin: 1rem 0;
   }
@@ -391,7 +569,6 @@ footer {
     margin-bottom: 1.5rem;
   }
 
-  /* Stack buttons vertically on phone screens */
   .hero-ctas {
     flex-direction: column;
     gap: 0.8rem;
@@ -410,6 +587,7 @@ footer {
 
   /* 3. Sections & Padding */
   .services-section, 
+  .vehicles-section,
   .about-section, 
   .contact-section {
     padding: 3rem 1rem;
@@ -420,21 +598,46 @@ footer {
     padding: 1.5rem 1rem;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr; /* Force 1 column on phone */
-    gap: 1rem;
+  .services-grid,
+  .vehicles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .service-card {
     padding: 1.25rem;
   }
 
-  /* 4. Booking Modal Mobile Fixes */
+  /* 4. Mobile Collage Adjustments */
+  .mercury-collage {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 100px);
+  }
+
+  .toyota-collage {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 80px);
+  }
+
+  .toyota-collage .collage-item.large {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .toyota-collage .collage-item.wide {
+    grid-column: 1 / 3;
+  }
+
+  .toyota-collage .collage-item.normal {
+    grid-column: 1 / 3;
+  }
+
+  /* 5. Booking Modal Mobile Fixes */
   .modal-content {
     padding: 1.5rem;
     width: 92%;
-    max-height: 90vh; /* Prevents modal from overflowing off screen */
-    overflow-y: auto; /* Adds scrolling if keyboard pops up */
+    max-height: 90vh;
+    overflow-y: auto;
   }
 
   .contact-item {

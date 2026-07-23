@@ -11,9 +11,15 @@ const serviceSelect = document.getElementById('serviceType');
 const customDetails = document.getElementById('customDetails');
 const customLabel = document.getElementById('customLabel');
 
-// Open/Close Modal
+// Open/Close Booking Modal
 openModalBtns.forEach(btn => {
   btn.addEventListener('click', () => {
+    // If clicked from a vehicle card, pre-fill vehicle choice in details
+    const selectedVehicle = btn.getAttribute('data-vehicle');
+    if (selectedVehicle && customDetails) {
+      customDetails.value = `Vehicle Request: ${selectedVehicle}`;
+    }
+
     modal.style.display = 'flex';
   });
 });
@@ -64,4 +70,50 @@ bookingForm.addEventListener('submit', (e) => {
   window.open(`https://wa.me/33781473999?text=${message}`, '_blank');
   
   modal.style.display = 'none';
+});
+
+// ==========================================
+// IMAGE LIGHTBOX POPUP (FULLSCREEN PHOTO VIEW)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeLightbox = document.getElementById('closeLightbox');
+  const collageItems = document.querySelectorAll('.collage-item');
+
+  // Open lightbox when clicking any vehicle photo
+  collageItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const bgStyle = item.style.backgroundImage;
+      if (bgStyle) {
+        // Extract URL string from inline style
+        const imageUrl = bgStyle.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+        lightboxImg.src = imageUrl;
+        lightbox.classList.add('active');
+      }
+    });
+  });
+
+  // Close when clicking 'X'
+  if (closeLightbox) {
+    closeLightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+  }
+
+  // Close when clicking on dark backdrop
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+      }
+    });
+  }
+
+  // Close on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
+      lightbox.classList.remove('active');
+    }
+  });
 });
