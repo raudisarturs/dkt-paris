@@ -20,13 +20,22 @@
       <a href="#" class="brand-logo">
         <span class="logo-text">DKT <span class="gold-text">Paris</span></span>
       </a>
-      <ul class="nav-links">
+
+      <!-- Added id="navLinks" for Mobile Toggle -->
+      <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
         <li><a href="#vehicles">Vehicles</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="btn btn-gold open-modal-btn">Book Now</button>
+
+      <div class="nav-actions">
+        <button class="btn btn-gold open-modal-btn">Book Now</button>
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -250,6 +259,16 @@
           </select>
         </div>
 
+        <!-- Vehicle Selection Dropdown -->
+        <div class="input-group">
+          <label for="vehicleType">Select Vehicle *</label>
+          <select id="vehicleType">
+            <option value="No Preference">No Preference / Flexible</option>
+            <option value="Mercedes-Benz V-Class">Mercedes-Benz V-Class (Luxury Van)</option>
+            <option value="Toyota Proace">Toyota Proace (Minivan)</option>
+          </select>
+        </div>
+
         <!-- Custom Request / Notes Textarea -->
         <div class="input-group" id="customGroup">
           <label for="customDetails" id="customLabel">Custom Request / Additional Details</label>
@@ -267,6 +286,7 @@
       </form>
     </div>
   </div>
+
   <!-- Image Lightbox Popup -->
   <div class="lightbox-overlay" id="imageLightbox">
     <span class="close-lightbox" id="closeLightbox">&times;</span>

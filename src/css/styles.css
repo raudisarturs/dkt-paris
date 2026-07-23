@@ -57,6 +57,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .brand-logo {
@@ -83,6 +84,30 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover { color: var(--gold-primary); }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Hamburger button is hidden by default on desktop */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border-gold);
+  color: var(--gold-primary);
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
 
 /* Buttons */
 .btn {
@@ -476,6 +501,7 @@ footer {
   font-size: 0.85rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 /* Image Lightbox Overlay */
 .lightbox-overlay {
   position: fixed;
@@ -528,18 +554,15 @@ footer {
 .close-lightbox:hover {
   color: var(--gold-primary);
 }
+
 /* ==========================================
-   MOBILE & TABLET RESPONSIVE STYLES
+   MOBILE & TABLET RESPONSIVE STYLES (≤768px)
    ========================================== */
 
 @media (max-width: 768px) {
-  /* 1. Navbar Adjustments */
+  /* 1. Mobile Navigation & Dropdown Menu */
   .nav-container {
     padding: 0.8rem 1rem;
-  }
-
-  .nav-links {
-    display: none; 
   }
 
   .brand-logo .logo-text {
@@ -549,6 +572,31 @@ footer {
   .navbar .btn {
     padding: 0.5rem 0.9rem;
     font-size: 0.85rem;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 11, 0.98);
+    backdrop-filter: blur(15px);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   /* 2. Hero Section */
@@ -624,15 +672,12 @@ footer {
     grid-row: 1 / 2;
   }
 
-  .toyota-collage .collage-item.wide {
-    grid-column: 1 / 3;
-  }
-
+  .toyota-collage .collage-item.wide,
   .toyota-collage .collage-item.normal {
     grid-column: 1 / 3;
   }
 
-  /* 5. Booking Modal Mobile Fixes */
+  /* 5. Booking Modal & Contact Items Mobile Fixes */
   .modal-content {
     padding: 1.5rem;
     width: 92%;
