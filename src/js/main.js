@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (details) message += `%0A*${labels.details}:* ${encodeURIComponent(details)}`;
       message += `%0A*${labels.time}:* ${encodeURIComponent(time)}`;
 
-      window.open(`https://wa.me/33781473999?text=${message}`, "_blank");
+      window.open(`https://wa.me/33759533763?text=${message}`, "_blank");
       modal.style.display = "none";
     });
   }
