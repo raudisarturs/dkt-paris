@@ -1,301 +1,485 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DKT Paris | Luxury Chauffeur & VTC Services</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="icon" type="image/png" href="src/assets/favicon.png">
-  <link rel="stylesheet" href="src/css/styles.css">
-  <script src="src/js/main.js" defer></script>
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="brand-logo">
-        <span class="logo-text">DKT <span class="gold-text">Paris</span></span>
-      </a>
-
-      <!-- Added id="navLinks" for Mobile Toggle -->
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#vehicles">Vehicles</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <button class="btn btn-gold open-modal-btn">Book Now</button>
-        <!-- Mobile Toggle Button -->
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
-          <i data-lucide="menu"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <span class="badge">VTC & Exclusive Concierge</span>
-      <h1>Discover the Heart of Paris in <span class="gold-gradient">Unrivaled Luxury</span></h1>
-      <p class="hero-subtitle">Premium Transfers • Airport Pickup • Private City Tours • France & Beyond</p>
-      
-      <div class="hero-ctas">
-        <button class="btn btn-gold open-modal-btn">
-          <i data-lucide="calendar"></i> Book Your Chauffeur
-        </button>
-        <a href="https://wa.me/33781473999" target="_blank" class="btn btn-outline">
-          <i data-lucide="message-circle"></i> Direct WhatsApp
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DKT Paris | Luxury Chauffeur & VTC Services</title>
+    <meta name="description" content="DKT Paris provides premium airport transfers, private VTC chauffeur services, Paris tours, shopping trips and luxury travel across France and Europe." />
+    <meta name="theme-color" content="#0a0a0b" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="src/assets/favicon.png" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <script src="src/js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="brand-logo">
+          <span class="logo-text"
+            >DKT <span class="gold-text">Paris</span></span
+          >
         </a>
-      </div>
 
-      <div class="lang-flags">
-        <span class="flag-pill">🇫🇷 Français</span>
-        <span class="flag-pill">🇬🇧 English</span>
-        <span class="flag-pill">🇷🇺 Русский</span>
-      </div>
-    </div>
-  </header>
+        <!-- Added id="navLinks" for Mobile Toggle -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="vehicles.html" data-i18n="nav.vehicles">Vehicles</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
 
-  <!-- Services Grid -->
-  <section id="services" class="services-section">
-    <div class="section-header">
-      <h2>Bespoke Services</h2>
-      <div class="gold-divider"></div>
-      <p>Tailored transportation and concierge solutions tailored to your schedule.</p>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <i data-lucide="plane-takeoff" class="service-icon"></i>
-        <h3>Airport Pickup & Transfers</h3>
-        <p>Seamless transfers from CDG, Orly, and Beauvais with live flight tracking.</p>
-      </div>
-
-      <div class="service-card">
-        <i data-lucide="map-pin" class="service-icon"></i>
-        <h3>Custom City Tours</h3>
-        <p>Explore Parisian landmarks in luxury, guided by private local experts.</p>
-      </div>
-
-      <div class="service-card">
-        <i data-lucide="car" class="service-icon"></i>
-        <h3>Private VTC & Chauffeur</h3>
-        <p>By-the-hour or full-day high-end Mercedes van & luxury vehicle dispatch.</p>
-      </div>
-
-      <div class="service-card">
-        <i data-lucide="shopping-bag" class="service-icon"></i>
-        <h3>Shopping Trips</h3>
-        <p>VIP transport to fashion districts, avenue des Champs-Élysées, and outlets.</p>
-      </div>
-
-      <div class="service-card">
-        <i data-lucide="globe" class="service-icon"></i>
-        <h3>International Trips</h3>
-        <p>Cross-border long-distance luxury travel across Europe.</p>
-      </div>
-
-      <div class="service-card">
-        <i data-lucide="heart" class="service-icon"></i>
-        <h3>Weddings & Special Events</h3>
-        <p>Elegant fleet management for weddings, galas, and VIP celebrations.</p>
-      </div>
-
-      <div class="service-card">
-        <i data-lucide="truck" class="service-icon"></i>
-        <h3>Relocation Services</h3>
-        <p>Full assistance for smooth moves and transition transport across Paris.</p>
-      </div>
-
-      <div class="service-card">
-        <i data-lucide="compass" class="service-icon"></i>
-        <h3>Guides Throughout France</h3>
-        <p>Dedicated French countryside itineraries, Normandy, Riviera & more.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About / Legal Section -->
-  <section id="about" class="about-section">
-    <div class="about-card">
-      <div class="about-info">
-        <h2>Experience Excellence</h2>
-        <p>At <strong>DKT Paris</strong>, we set the standard for private passenger transport and luxury tours across France. Whether traveling for business, pleasure, or special occasions, our professional multilingual drivers ensure safety, discretion, and ultimate comfort.</p>
-        <div class="registration-badge">
-          <i data-lucide="shield-check"></i>
-          <span>Official Registered License: <strong>989 053 004 R.C.S Evry</strong></span>
+        <div class="nav-actions">
+          <button class="btn btn-gold open-modal-btn" data-i18n="nav.book">Book Now</button>
+          <!-- Mobile Toggle Button -->
+          <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="Toggle Menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Vehicles Section -->
-  <section id="vehicles" class="vehicles-section">
-    <div class="section-header">
-      <h2>Our Vehicles</h2>
-      <div class="gold-divider"></div>
-      <p>Premium Mercedes and Toyota fleet tailored for executive comfort, airport transfers, and private group travel.</p>
-    </div>
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="badge" data-i18n="hero.badge">VTC & Exclusive Concierge</span>
 
-    <div class="vehicles-grid">
-      <!-- Vehicle Card 1: Mercedes V-Class -->
-      <div class="vehicle-card">
-        <div class="vehicle-badge">Most Popular</div>
-        
-        <!-- Mercedes Photo Collage (m1.jpg to m4.jpg) -->
-        <div class="collage-grid mercury-collage">
-          <div class="collage-item large" style="background-image: url('src/assets/m1.jpg');"></div>
-          <div class="collage-item medium" style="background-image: url('src/assets/m2.jpg');"></div>
-          <div class="collage-item small" style="background-image: url('src/assets/m3.jpg');"></div>
-          <div class="collage-item wide" style="background-image: url('src/assets/m4.jpg');"></div>
+        <h1>
+          <span data-i18n="hero.titlePrefix">Private Chauffeur & Luxury Transfers in</span>
+          <span class="gold-gradient" data-i18n="hero.titleAccent">Paris</span>
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+          Airport transfers, private tours and premium chauffeur services across Paris, France and beyond.
+        </p>
+
+        <div class="hero-ctas">
+          <button class="btn btn-gold open-modal-btn">
+            <i data-lucide="calendar"></i>
+            <span data-i18n="hero.book">Book Your Chauffeur</span>
+          </button>
+
+          <a href="https://wa.me/33781473999" target="_blank" class="btn btn-outline">
+            <i data-lucide="message-circle"></i>
+            <span data-i18n="hero.whatsapp">WhatsApp Us</span>
+          </a>
         </div>
 
-        <div class="vehicle-details">
+        <div class="hero-trust">
+          <div class="trust-item">
+            <i data-lucide="plane"></i>
+            <span data-i18n="trust.airport">Airport Pickup</span>
+          </div>
+          <div class="trust-item">
+            <i data-lucide="radar"></i>
+            <span data-i18n="trust.flight">Flight Tracking</span>
+          </div>
+          <div class="trust-item">
+            <i data-lucide="languages"></i>
+            <span data-i18n="trust.languages">Multilingual Drivers</span>
+          </div>
+          <div class="trust-item">
+            <i data-lucide="car-front"></i>
+            <span data-i18n="trust.vehicles">Premium Vehicles</span>
+          </div>
+        </div>
+
+        <div class="lang-flags" aria-label="Language selector">
+          <button class="flag-pill language-btn active" data-language="en" type="button" aria-label="English" title="English">
+            <svg class="flag-icon" viewBox="0 0 60 40" aria-hidden="true">
+              <rect width="60" height="40" fill="#012169"/>
+              <path d="M0 0l60 40M60 0L0 40" stroke="#fff" stroke-width="8"/>
+              <path d="M0 0l60 40M60 0L0 40" stroke="#c8102e" stroke-width="4"/>
+              <path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="12"/>
+              <path d="M30 0v40M0 20h60" stroke="#c8102e" stroke-width="7"/>
+            </svg><span>EN</span>
+          </button>
+          <button class="flag-pill language-btn" data-language="fr" type="button" aria-label="Français" title="Français">
+            <svg class="flag-icon" viewBox="0 0 60 40" aria-hidden="true">
+              <rect width="20" height="40" fill="#0055a4"/>
+              <rect x="20" width="20" height="40" fill="#fff"/>
+              <rect x="40" width="20" height="40" fill="#ef4135"/>
+            </svg><span>FR</span>
+          </button>
+          <button class="flag-pill language-btn" data-language="ru" type="button" aria-label="Русский" title="Русский">
+            <svg class="flag-icon" viewBox="0 0 60 40" aria-hidden="true">
+              <rect width="60" height="13.33" fill="#fff"/>
+              <rect y="13.33" width="60" height="13.34" fill="#0039a6"/>
+              <rect y="26.67" width="60" height="13.33" fill="#d52b1e"/>
+            </svg><span>RU</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services Grid -->
+    <section id="services" class="services-section">
+      <div class="section-header">
+        <h2 data-i18n="services.title">Bespoke Services</h2>
+        <div class="gold-divider"></div>
+        <p>
+          <span data-i18n="services.subtitle">Private transportation, chauffeur service, guides and tailor-made journeys across France, Belgium and Europe.</span>
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <i data-lucide="plane-takeoff" class="service-icon"></i>
+          <h3 data-i18n="services.airport.title">Airport Pickup & Transfers</h3>
+          <p data-i18n="services.airport.text">Seamless transfers from CDG, Orly, and Beauvais with live flight tracking.</p>
+        </div>
+
+        <div class="service-card">
+          <i data-lucide="map-pin" class="service-icon"></i>
+          <h3 data-i18n="services.tours.title">Custom City Tours</h3>
+          <p data-i18n="services.tours.text">Explore Parisian landmarks in luxury, guided by private local experts.</p>
+        </div>
+
+        <div class="service-card">
+          <i data-lucide="car" class="service-icon"></i>
+          <h3 data-i18n="services.vtc.title">Private VTC & Chauffeur</h3>
+          <p data-i18n="services.vtc.text">By-the-hour or full-day high-end Mercedes van & luxury vehicle dispatch.</p>
+        </div>
+
+        <div class="service-card">
+          <i data-lucide="shopping-bag" class="service-icon"></i>
+          <h3 data-i18n="services.shopping.title">Shopping Trips</h3>
+          <p data-i18n="services.shopping.text">VIP transport to fashion districts, avenue des Champs-Élysées, and outlets.</p>
+        </div>
+
+        <div class="service-card">
+          <i data-lucide="globe" class="service-icon"></i>
+          <h3 data-i18n="services.international.title">Multi-Country Europe Trips</h3>
+          <p data-i18n="services.international.text">Private long-distance journeys across France, neighboring European countries, Italy and other destinations by request.</p>
+        </div>
+
+        <div class="service-card">
+          <i data-lucide="heart" class="service-icon"></i>
+          <h3 data-i18n="services.events.title">Weddings & Special Events</h3>
+          <p data-i18n="services.events.text">Elegant fleet management for weddings, galas, and VIP celebrations.</p>
+        </div>
+
+        <div class="service-card">
+          <i data-lucide="truck" class="service-icon"></i>
+          <h3 data-i18n="services.relocation.title">Relocation Services</h3>
+          <p data-i18n="services.relocation.text">Full assistance for smooth moves and transition transport across Paris.</p>
+        </div>
+
+        <div class="service-card">
+          <i data-lucide="compass" class="service-icon"></i>
+          <h3 data-i18n="services.guides.title">Private Guides in France & Belgium</h3>
+          <p data-i18n="services.guides.text">Local guides and private itineraries in France and Belgium, from major cities to countryside escapes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Legal Section -->
+    <section id="about" class="about-section">
+      <div class="about-card">
+        <div class="about-info">
+          <h2 data-i18n="about.title">Experience Excellence</h2>
+          <p>
+            At <strong>DKT Paris</strong>, we set the standard for private
+            passenger transport and luxury tours across France. Whether
+            traveling for business, pleasure, or special occasions, our
+            professional multilingual drivers ensure safety, discretion, and
+            ultimate comfort.
+          </p>
+          <div class="registration-badge">
+            <i data-lucide="shield-check"></i>
+            <span
+              >Official Registered License:
+              <strong>989 053 004 R.C.S Evry</strong></span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vehicles Section -->
+    <section id="vehicles" class="vehicles-section fleet-section">
+      <div class="section-header fleet-section-header">
+        <div class="section-kicker">DKT PARIS</div>
+        <h2 data-i18n="vehicles.title">Our Fleet</h2>
+        <div class="gold-divider"></div>
+        <p>
+          <span data-i18n="vehicles.subtitle">Premium Mercedes and Toyota vehicles tailored for executive comfort, airport transfers, and private group travel.</span>
+        </p>
+        <a class="fleet-browse-btn" href="vehicles.html"><span data-i18n="vehicles.browseAll">Browse All Vehicles</span><i data-lucide="chevrons-right"></i></a>
+      </div>
+
+      <!-- Featured Mercedes V-Class -->
+      <article class="fleet-featured">
+        <div class="fleet-featured-media">
+          <div class="fleet-featured-badge">
+            <span data-i18n="vehicles.popular">Most Popular</span>
+          </div>
+
+          <div class="fleet-main-photo collage-item"
+               style="background-image: url(&quot;src/assets/m1.jpg&quot;)"
+               role="img"
+               aria-label="Mercedes-Benz V-Class">
+          </div>
+
+          <div class="fleet-photo-strip">
+            <div class="fleet-thumb collage-item" style="background-image:url(&quot;src/assets/m2.jpg&quot;)" aria-label="Mercedes-Benz V-Class interior"></div>
+            <div class="fleet-thumb collage-item" style="background-image:url(&quot;src/assets/m3.jpg&quot;)" aria-label="Mercedes-Benz V-Class exterior"></div>
+            <div class="fleet-thumb collage-item" style="background-image:url(&quot;src/assets/m4.jpg&quot;)" aria-label="Mercedes-Benz V-Class detail"></div>
+          </div>
+        </div>
+
+        <div class="fleet-featured-content">
+          <div class="fleet-eyebrow" data-i18n="vehicles.vclass.category">Luxury Van / Minivan</div>
           <h3>Mercedes-Benz V-Class</h3>
-          <p class="vehicle-category">Luxury Van / Minivan</p>
+          <p class="fleet-lead" data-i18n="vehicles.vclass.description">
+            Our signature vehicle for airport transfers, private tours, business travel and VIP groups.
+          </p>
 
-          <button class="btn btn-gold btn-full open-modal-btn" data-vehicle="Mercedes-Benz V-Class">
-            Book
-          </button>
+          <div class="fleet-specs">
+            <div class="fleet-spec">
+              <i data-lucide="users"></i>
+              <div>
+                <strong data-i18n="vehicles.vclass.passengers">Up to 7 passengers</strong>
+                <span data-i18n="vehicles.vclass.passengersSub">Spacious private travel</span>
+              </div>
+            </div>
+            <div class="fleet-spec">
+              <i data-lucide="briefcase-business"></i>
+              <div>
+                <strong data-i18n="vehicles.vclass.luggage">Large luggage capacity</strong>
+                <span data-i18n="vehicles.vclass.luggageSub">Ideal for airport journeys</span>
+              </div>
+            </div>
+            <div class="fleet-spec">
+              <i data-lucide="shield-check"></i>
+              <div>
+                <strong data-i18n="vehicles.vclass.privacy">Privacy & discretion</strong>
+                <span data-i18n="vehicles.vclass.privacySub">Professional chauffeur service</span>
+              </div>
+            </div>
+            <div class="fleet-spec">
+              <i data-lucide="snowflake"></i>
+              <div>
+                <strong data-i18n="vehicles.vclass.comfort">Premium comfort</strong>
+                <span data-i18n="vehicles.vclass.comfortSub">Climate-controlled cabin</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="fleet-actions">
+            <button class="btn btn-gold open-modal-btn" data-vehicle="Mercedes-Benz V-Class">
+              <span data-i18n="vehicles.book">Book This Vehicle</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
+            <span class="fleet-note" data-i18n="vehicles.vclass.note">Perfect for airport transfers & private groups</span>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Vehicle Card 2: Toyota Proace -->
-      <div class="vehicle-card">
-        <!-- Toyota Photo Collage (t1.jpg to t7.jpg) -->
-        <div class="collage-grid toyota-collage">
-          <div class="collage-item large" style="background-image: url('src/assets/t1.jpg');"></div>
-          <div class="collage-item medium" style="background-image: url('src/assets/t2.jpg');"></div>
-          <div class="collage-item small" style="background-image: url('src/assets/t3.jpg');"></div>
-          <div class="collage-item medium" style="background-image: url('src/assets/t4.jpg');"></div>
-          <div class="collage-item wide" style="background-image: url('src/assets/t5.jpg');"></div>
-          <div class="collage-item small" style="background-image: url('src/assets/t6.jpg');"></div>
-          <div class="collage-item normal" style="background-image: url('src/assets/t7.jpg');"></div>
+      <!-- Secondary vehicle -->
+      <article class="fleet-secondary">
+        <div class="fleet-secondary-media collage-item"
+             style="background-image: url(&quot;src/assets/t1.jpg&quot;)"
+             role="img"
+             aria-label="Toyota Proace">
         </div>
-
-        <div class="vehicle-details">
+        <div class="fleet-secondary-content">
+          <div class="fleet-eyebrow" data-i18n="vehicles.proace.category">Minivan</div>
           <h3>Toyota Proace</h3>
-          <p class="vehicle-category">Minivan</p>
-
-          <button class="btn btn-gold btn-full open-modal-btn" data-vehicle="Toyota Proace">
-            Book
+          <p data-i18n="vehicles.proace.description">
+            A practical premium option for private groups and comfortable transfers.
+          </p>
+          <button class="fleet-link-btn open-modal-btn" data-vehicle="Toyota Proace">
+            <span data-i18n="vehicles.proace.cta">Book Toyota Proace</span>
+            <i data-lucide="arrow-up-right"></i>
           </button>
         </div>
-      </div>
-    </div>
-  </section>
+      </article>
+    </section>
 
-  <!-- Contact & Booking Section -->
-  <section id="contact" class="contact-section">
-    <div class="contact-box">
-      <h2>Get In Touch</h2>
-      <p>Reserve your vehicle or inquire about custom itineraries directly.</p>
-      
-      <div class="contact-cards">
-        <a href="tel:+33781473999" class="contact-item">
-          <i data-lucide="phone"></i>
-          <div>
-            <span>Primary Contact (FR | EN | RU)</span>
-            <strong>+33 7 81 47 39 99</strong>
-          </div>
-        </a>
-
-        <a href="tel:+33759533763" class="contact-item">
-          <i data-lucide="phone-call"></i>
-          <div>
-            <span>Secondary Line (FR | RU)</span>
-            <strong>+33 7 59 53 37 63</strong>
-          </div>
-        </a>
-
-        <a href="mailto:dktparisinfo@gmail.com" class="contact-item">
-          <i data-lucide="mail"></i>
-          <div>
-            <span>Email Enquiries</span>
-            <strong>dktparisinfo@gmail.com</strong>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Booking Modal -->
-  <div class="modal-overlay" id="bookingModal">
-    <div class="modal-content">
-      <button class="close-modal" id="closeModal">&times;</button>
-      <h3>Reserve Your Trip</h3>
-      <p>Fill out your details to request an instant quote via WhatsApp or Email.</p>
-
-      <form id="bookingForm">
-        <div class="input-group">
-          <label for="custName">Full Name *</label>
-          <input type="text" id="custName" required placeholder="John Doe">
-        </div>
-
-        <!-- Mandatory Phone Number -->
-        <div class="input-group">
-          <label for="custPhone">Phone Number *</label>
-          <input type="tel" id="custPhone" required placeholder="+33 6 12 34 56 78">
-        </div>
-
-        <div class="input-group">
-          <label for="serviceType">Service Type *</label>
-          <select id="serviceType">
-            <option value="Airport Transfer">Airport Transfer</option>
-            <option value="City Tour">City Tour</option>
-            <option value="Private VTC Chauffeur">Private VTC Chauffeur</option>
-            <option value="Shopping Trip">Shopping Trip</option>
-            <option value="Weddings / Events">Weddings / Events</option>
-            <option value="International Trip">International Trip</option>
-            <option value="Custom / Other Request">Other / Custom Request (Write Below)</option>
-          </select>
-        </div>
-
-        <!-- Vehicle Selection Dropdown -->
-        <div class="input-group">
-          <label for="vehicleType">Select Vehicle *</label>
-          <select id="vehicleType">
-            <option value="No Preference">No Preference / Flexible</option>
-            <option value="Mercedes-Benz V-Class">Mercedes-Benz V-Class (Luxury Van)</option>
-            <option value="Toyota Proace">Toyota Proace (Minivan)</option>
-          </select>
-        </div>
-
-        <!-- Custom Request / Notes Textarea -->
-        <div class="input-group" id="customGroup">
-          <label for="customDetails" id="customLabel">Custom Request / Additional Details</label>
-          <textarea id="customDetails" rows="3" placeholder="Describe your destination, custom route, or special needs..."></textarea>
-        </div>
-
-        <div class="input-group">
-          <label for="pickupTime">Date & Time *</label>
-          <input type="datetime-local" id="pickupTime" required>
-        </div>
-
-        <button type="submit" class="btn btn-gold btn-full">
-          <i data-lucide="message-square"></i> Send Booking Request
+    <!-- Browse All Vehicles Modal -->
+    <div id="fleetBrowser" class="fleet-browser" aria-hidden="true">
+      <div class="fleet-browser-backdrop" data-close-fleet-browser></div>
+      <div class="fleet-browser-dialog" role="dialog" aria-modal="true" aria-labelledby="fleetBrowserTitle">
+        <button class="fleet-browser-close" type="button" data-close-fleet-browser aria-label="Close">
+          <i data-lucide="x"></i>
         </button>
-      </form>
+
+        <div class="fleet-browser-header">
+          <div class="section-kicker">DKT PARIS</div>
+          <h2 id="fleetBrowserTitle" data-i18n="vehicles.browseTitle">Browse Our Fleet</h2>
+          <p data-i18n="vehicles.browseSubtitle">Explore every vehicle currently available for private transfers and chauffeur service.</p>
+        </div>
+
+        <div class="fleet-browser-grid">
+          <article class="fleet-browser-card">
+            <div class="fleet-browser-image collage-item" style="background-image:url(&quot;src/assets/m1.jpg&quot;)"></div>
+            <div class="fleet-browser-card-content">
+              <div class="fleet-eyebrow" data-i18n="vehicles.vclass.category">Luxury Van / Minivan</div>
+              <h3>Mercedes-Benz V-Class</h3>
+              <p data-i18n="vehicles.vclass.description">Our signature vehicle for airport transfers, private tours, business travel and VIP groups.</p>
+              <button class="btn btn-gold open-modal-btn" data-vehicle="Mercedes-Benz V-Class">
+                <span data-i18n="vehicles.book">Book This Vehicle</span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="fleet-browser-card">
+            <div class="fleet-browser-image collage-item" style="background-image:url(&quot;src/assets/t1.jpg&quot;)"></div>
+            <div class="fleet-browser-card-content">
+              <div class="fleet-eyebrow" data-i18n="vehicles.proace.category">Minivan</div>
+              <h3>Toyota Proace</h3>
+              <p data-i18n="vehicles.proace.description">A practical premium option for private groups and comfortable transfers.</p>
+              <button class="btn btn-gold open-modal-btn" data-vehicle="Toyota Proace">
+                <span data-i18n="vehicles.proace.cta">Book Toyota Proace</span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- Image Lightbox Popup -->
-  <div class="lightbox-overlay" id="imageLightbox">
-    <span class="close-lightbox" id="closeLightbox">&times;</span>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged Vehicle Image">
-  </div>
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-box">
+        <h2 data-i18n="contact.title">Get In Touch</h2>
+        <p>
+          <span data-i18n="contact.subtitle">Reserve your vehicle or inquire about custom itineraries directly.</span>
+        </p>
 
-  <footer>
-    <p>&copy; 2026 DKT Paris. All rights reserved. Registered Tour Agent & VTC Provider.</p>
-  </footer>
+        <div class="contact-cards">
+          <a href="tel:+33781473999" class="contact-item">
+            <i data-lucide="phone"></i>
+            <div>
+              <span data-i18n="contact.primary">Primary Contact (FR | EN | RU)</span>
+              <strong>+33 7 81 47 39 99</strong>
+            </div>
+          </a>
 
-</body>
+          <a href="tel:+33759533763" class="contact-item">
+            <i data-lucide="phone-call"></i>
+            <div>
+              <span data-i18n="contact.secondary">Secondary Line (FR | RU)</span>
+              <strong>+33 7 59 53 37 63</strong>
+            </div>
+          </a>
+
+          <a href="mailto:dktparisinfo@gmail.com" class="contact-item">
+            <i data-lucide="mail"></i>
+            <div>
+              <span data-i18n="contact.email">Email Enquiries</span>
+              <strong>dktparisinfo@gmail.com</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="bookingModal">
+      <div class="modal-content">
+        <button class="close-modal" id="closeModal">&times;</button>
+        <h3 data-i18n="modal.title">Reserve Your Trip</h3>
+        <p>
+          <span data-i18n="modal.subtitle">Fill out your details to request an instant quote via WhatsApp or Email.</span>
+        </p>
+
+        <form id="bookingForm">
+          <div class="input-group">
+            <label for="custName" data-i18n="form.name">Full Name *</label>
+            <input type="text" id="custName" required placeholder="John Doe" data-i18n-placeholder="form.namePlaceholder" />
+          </div>
+
+          <!-- Mandatory Phone Number -->
+          <div class="input-group">
+            <label for="custPhone" data-i18n="form.phone">Phone Number *</label>
+            <input
+              type="tel"
+              id="custPhone"
+              required
+              placeholder="+33 6 12 34 56 78"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="serviceType" data-i18n="form.service">Service Type *</label>
+            <select id="serviceType">
+              <option value="Airport Transfer" data-i18n="form.airport">Airport Transfer</option>
+              <option value="City Tour" data-i18n="form.city">City Tour</option>
+              <option value="Private VTC Chauffeur">
+                Private VTC Chauffeur
+              </option>
+              <option value="Shopping Trip" data-i18n="form.shopping">Shopping Trip</option>
+              <option value="Weddings / Events" data-i18n="form.events">Weddings / Events</option>
+              <option value="International Trip" data-i18n="form.international">International Trip</option>
+              <option value="Custom / Other Request" data-i18n="form.custom">Other / Custom Request (Write Below)</option>
+            </select>
+          </div>
+
+          <!-- Vehicle Selection Dropdown -->
+          <div class="input-group">
+            <label for="vehicleType" data-i18n="form.vehicle">Select Vehicle *</label>
+            <select id="vehicleType">
+              <option value="No Preference" data-i18n="form.noPreference">No Preference / Flexible</option>
+              <option value="Mercedes-Benz V-Class" data-i18n="form.vclass">Mercedes-Benz V-Class (Luxury Van)</option>
+              <option value="Toyota Proace" data-i18n="form.proace">Toyota Proace (Minivan)</option>
+            </select>
+          </div>
+
+          <!-- Custom Request / Notes Textarea -->
+          <div class="input-group" id="customGroup">
+            <label for="customDetails" id="customLabel"
+              >Custom Request / Additional Details</label
+            >
+            <textarea
+              id="customDetails"
+              rows="3"
+              placeholder="Describe your destination, custom route, or special needs..."
+              data-i18n-placeholder="form.detailsPlaceholder"
+            ></textarea>
+          </div>
+
+          <div class="input-group">
+            <label for="pickupTime" data-i18n="form.datetime">Date & Time *</label>
+            <input type="datetime-local" id="pickupTime" required />
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-full">
+            <i data-lucide="message-square"></i> <span data-i18n="form.submit">Send Booking Request</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Image Lightbox Popup -->
+    <div class="lightbox-overlay" id="imageLightbox">
+      <span class="close-lightbox" id="closeLightbox">&times;</span>
+      <img
+        class="lightbox-img"
+        id="lightboxImg"
+        src=""
+        alt="Enlarged Vehicle Image" data-i18n-alt="lightbox.alt"
+      />
+    </div>
+
+    <footer>
+      <p>
+        <span data-i18n="footer">© 2026 DKT Paris. All rights reserved. Registered Tour Agent & VTC Provider.</span>
+      </p>
+    </footer>
+  </body>
 </html>

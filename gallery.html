@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DKT Paris | Recent Gallery</title>
+<meta name="description" content="Explore the complete DKT Paris image gallery, including Mercedes-Benz V-Class and Toyota Proace photography.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="icon" type="image/png" href="src/assets/favicon.png">
+<link rel="stylesheet" href="src/css/styles.css">
+<script src="src/js/main.js" defer></script>
+</head>
+<body class="inner-page">
+<nav class="navbar">
+<div class="nav-container">
+<a href="index.html" class="brand-logo"><span class="logo-text">DKT <span class="gold-text">Paris</span></span></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+<li><a href="vehicles.html" data-i18n="nav.vehicles">Vehicles</a></li>
+<li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+<li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+<li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+</ul>
+<div class="nav-actions">
+<button class="btn btn-gold open-modal-btn" data-i18n="nav.book">Book Now</button>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu"><i data-lucide="menu"></i></button>
+</div>
+</div>
+</nav>
+<header class="inner-hero gallery-page-hero">
+<div class="inner-hero-overlay"></div>
+<div class="inner-hero-content">
+<div class="section-kicker">DKT PARIS</div>
+<h1 data-i18n="galleryPage.title">Recent Gallery</h1>
+<p data-i18n="galleryPage.subtitle">A closer look at our vehicles, interiors and the DKT Paris experience.</p>
+<div class="lang-flags" aria-label="Language selector">
+<button class="flag-pill language-btn active" data-language="en" type="button" aria-label="English" title="English">
+<svg class="flag-icon" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0 0l60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0l60 40M60 0L0 40" stroke="#c8102e" stroke-width="4"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="12"/><path d="M30 0v40M0 20h60" stroke="#c8102e" stroke-width="7"/></svg><span>EN</span>
+</button>
+<button class="flag-pill language-btn" data-language="fr" type="button" aria-label="Français" title="Français">
+<svg class="flag-icon" viewBox="0 0 60 40" aria-hidden="true"><rect width="20" height="40" fill="#0055a4"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#ef4135"/></svg><span>FR</span>
+</button>
+<button class="flag-pill language-btn" data-language="ru" type="button" aria-label="Русский" title="Русский">
+<svg class="flag-icon" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="13.33" fill="#fff"/><rect y="13.33" width="60" height="13.34" fill="#0039a6"/><rect y="26.67" width="60" height="13.33" fill="#d52b1e"/></svg><span>RU</span>
+</button>
+</div>
+</div>
+</header>
+
+<main class="dedicated-page">
+<section class="gallery-intro">
+<div><div class="section-kicker">RECENT MOMENTS</div><h2 data-i18n="galleryPage.introTitle">Luxury, in the details.</h2></div>
+<p data-i18n="galleryPage.introText">Browse the latest DKT Paris photography. Select any image to view it full screen.</p>
+</section>
+
+<section class="gallery-filter-bar">
+<button class="gallery-filter active" type="button" data-gallery-filter="all" data-i18n="galleryPage.all">All</button>
+<button class="gallery-filter" type="button" data-gallery-filter="mercedes" data-i18n="galleryPage.mercedes">Mercedes</button>
+<button class="gallery-filter" type="button" data-gallery-filter="toyota" data-i18n="galleryPage.toyota">Toyota</button>
+</section>
+
+<section class="recent-gallery-grid full-gallery-grid">
+<button class="gallery-photo gallery-photo-large collage-item" data-gallery-group="all" style="background-image:url('src/assets/hero-paris.jpeg')" aria-label="DKT Paris hero"></button>
+<button class="gallery-photo collage-item" data-gallery-group="mercedes" style="background-image:url('src/assets/m1.jpg')" aria-label="Mercedes-Benz V-Class"></button>
+<button class="gallery-photo collage-item" data-gallery-group="mercedes" style="background-image:url('src/assets/m2.jpg')" aria-label="Mercedes-Benz V-Class"></button>
+<button class="gallery-photo collage-item" data-gallery-group="mercedes" style="background-image:url('src/assets/m3.jpg')" aria-label="Mercedes-Benz V-Class"></button>
+<button class="gallery-photo collage-item" data-gallery-group="mercedes" style="background-image:url('src/assets/m4.jpg')" aria-label="Mercedes-Benz V-Class"></button>
+<button class="gallery-photo collage-item" data-gallery-group="mercedes" style="background-image:url('src/assets/n1.jpeg')" aria-label="Mercedes-Benz V-Class"></button>
+<button class="gallery-photo collage-item" data-gallery-group="mercedes" style="background-image:url('src/assets/n2.jpeg')" aria-label="Mercedes-Benz V-Class"></button>
+<button class="gallery-photo collage-item" data-gallery-group="mercedes" style="background-image:url('src/assets/n3.jpeg')" aria-label="Mercedes-Benz V-Class"></button>
+<button class="gallery-photo collage-item" data-gallery-group="mercedes" style="background-image:url('src/assets/n4.jpeg')" aria-label="Mercedes-Benz V-Class"></button>
+<button class="gallery-photo collage-item" data-gallery-group="toyota" style="background-image:url('src/assets/t1.jpg')" aria-label="Toyota Proace"></button>
+<button class="gallery-photo collage-item" data-gallery-group="toyota" style="background-image:url('src/assets/t2.jpg')" aria-label="Toyota Proace"></button>
+<button class="gallery-photo collage-item" data-gallery-group="toyota" style="background-image:url('src/assets/t3.jpg')" aria-label="Toyota Proace"></button>
+<button class="gallery-photo collage-item" data-gallery-group="toyota" style="background-image:url('src/assets/t4.jpg')" aria-label="Toyota Proace"></button>
+<button class="gallery-photo collage-item" data-gallery-group="toyota" style="background-image:url('src/assets/t5.jpg')" aria-label="Toyota Proace"></button>
+<button class="gallery-photo collage-item" data-gallery-group="toyota" style="background-image:url('src/assets/t6.jpg')" aria-label="Toyota Proace"></button>
+<button class="gallery-photo collage-item" data-gallery-group="toyota" style="background-image:url('src/assets/t7.jpg')" aria-label="Toyota Proace"></button>
+<button class="gallery-photo collage-item" data-gallery-group="all" style="background-image:url('src/assets/IMG_2935.png')" aria-label="DKT Paris image"></button>
+<button class="gallery-photo collage-item" data-gallery-group="all" style="background-image:url('src/assets/IMG_2937.png')" aria-label="DKT Paris image"></button>
+</section>
+
+<section class="dedicated-cta">
+<div><div class="section-kicker">DKT PARIS</div><h2 data-i18n="galleryPage.ctaTitle">See the fleet in person.</h2><p data-i18n="galleryPage.ctaText">Choose your vehicle and request a private booking.</p></div>
+<a href="vehicles.html" class="btn btn-gold"><span data-i18n="galleryPage.ctaButton">Explore Our Fleet</span><i data-lucide="arrow-right"></i></a>
+</section>
+</main>
+
+<div class="lightbox-overlay" id="imageLightbox"><span class="close-lightbox" id="closeLightbox">&times;</span><img class="lightbox-img" id="lightboxImg" src="" alt="Gallery image"></div>
+<footer><p><span data-i18n="footer">© 2026 DKT Paris. All rights reserved. Registered Tour Agent & VTC Provider.</span></p></footer>
+</body></html>
