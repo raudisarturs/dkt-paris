@@ -1859,3 +1859,220 @@ body.fleet-browser-open {
     line-height: 1.5;
   }
 }
+
+/* ==========================================
+   FINAL MOBILE HERO — FULL IMAGE VIEW
+   ========================================== */
+@media (max-width: 620px) {
+    .hero {
+        min-height: 100svh;
+        height: 100svh;
+        background-image: url("../assets/hero-paris.jpeg");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: #050506;
+        overflow: hidden;
+    }
+}
+
+/* ==========================================
+   FINAL MOBILE HERO TEXT SPACING FIX
+   Prevent translated text from colliding/wrapping into each other.
+   ========================================== */
+@media (max-width: 620px) {
+  .hero-content {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .badge {
+    display: inline-block;
+    max-width: 92%;
+    margin: 0 auto 1rem;
+    line-height: 1.35;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 400px;
+    margin: .7rem auto 1.25rem;
+    font-size: clamp(2rem, 9vw, 2.65rem);
+    line-height: 1.18;
+    letter-spacing: -.01em;
+  }
+
+  .hero h1 span {
+    line-height: inherit;
+  }
+
+  .hero-subtitle {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto 1.35rem;
+    font-size: .9rem;
+    line-height: 1.6;
+  }
+
+  .hero-ctas {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    gap: .7rem;
+  }
+
+  .hero-trust {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 1rem;
+    line-height: 1.35;
+  }
+
+  .hero .lang-flags {
+    margin-top: .35rem;
+  }
+}
+
+/* Russian needs a little more breathing room because the translated copy is longer. */
+@media (max-width: 620px) {
+  html[lang="ru"] .hero h1 {
+    font-size: clamp(1.95rem, 8.7vw, 2.5rem);
+    line-height: 1.2;
+    margin-top: .65rem;
+    margin-bottom: 1.15rem;
+  }
+
+  html[lang="ru"] .hero .badge {
+    max-width: 88%;
+    font-size: .72rem;
+    line-height: 1.35;
+  }
+
+  html[lang="ru"] .hero-subtitle {
+    font-size: .86rem;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 380px) {
+  html[lang="ru"] .hero h1 {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+
+  html[lang="ru"] .hero-subtitle {
+    font-size: .82rem;
+  }
+}
+
+/* ==========================================
+   FINAL MOBILE HERO — SERVICES-STYLE PHOTO
+   + STABLE TEXT LAYOUT
+   ========================================== */
+@media (max-width: 620px) {
+  .hero {
+    min-height: 100svh;
+    height: auto;
+    padding: 7rem 1rem 2.5rem;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .badge {
+    max-width: 92%;
+    margin: 0 auto 1rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 410px;
+    margin: .6rem auto 1.1rem;
+    font-size: clamp(2rem, 9vw, 2.7rem);
+    line-height: 1.16;
+    text-align: center;
+  }
+
+  .hero h1 span {
+    line-height: inherit;
+  }
+
+  .hero-subtitle {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto 1.2rem;
+    font-size: .88rem;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .hero-ctas {
+    width: 100%;
+    margin: 0 auto 1.3rem;
+    gap: .65rem;
+  }
+
+  .hero-ctas .btn {
+    min-height: 50px;
+  }
+
+  .hero-trust {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 1rem;
+    gap: .55rem .8rem;
+    line-height: 1.35;
+  }
+
+  .hero .lang-flags {
+    margin-top: .2rem;
+  }
+
+  /* Russian: give the longer translation a little extra breathing room. */
+  html[lang="ru"] .hero h1 {
+    font-size: clamp(1.9rem, 8.5vw, 2.5rem);
+    line-height: 1.18;
+    margin-bottom: 1.1rem;
+  }
+
+  html[lang="ru"] .hero .badge {
+    font-size: .72rem;
+    line-height: 1.35;
+  }
+
+  html[lang="ru"] .hero-subtitle {
+    font-size: .84rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    padding-left: .8rem;
+    padding-right: .8rem;
+  }
+
+  html[lang="ru"] .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  html[lang="ru"] .hero-subtitle {
+    font-size: .8rem;
+  }
+}
